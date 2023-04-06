@@ -1,6 +1,8 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  /*Non-positioned element will always be behind positioned element {.perspective here}, so to even out the level, setting this element to be positioned as well*/
+  position: relative;
 }
 
 .maxWidthWrapper {
@@ -28,4 +30,13 @@
 }
 
 .controlColumn {
+}
+
+/*Gray bar at bottom 40% of screen*/
+.perspective {
+  background-color: hsl(195deg, 20%, 86%);
+  height: 40%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
